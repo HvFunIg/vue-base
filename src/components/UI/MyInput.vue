@@ -18,7 +18,6 @@
 
 <style scoped>
 input{
-	width: 100%;
 	border: 1px solid greenyellow;
 	padding: 10px 15px;
 	margin-top: 10px;
