@@ -34,6 +34,7 @@
 <form @submit.prevent>
 ```
 ### 6. Импорт компонента
+#### Локальный импорт:
 ```
 <script>
 import PostList from "@/components/PostList"
@@ -45,9 +46,23 @@ export default {
     ...
 }
 ```
+#### Глобальный импорт
+```
+import components from '@/components/UI'
+
+const app = createApp(App)
+
+components.forEach(component =>{
+    app.component(component.name, component)
+})
+app.mount('#app')
+
+```
 ### 7. Двустороннее связывание также может быть осуществлено через *v-model*, тогда не нужно прописывать *v-bind*
 
 ### 8. Данные от ребенка к родителю передаются через $emit
+
+
 
 **Дочерний компонент:**
 ```

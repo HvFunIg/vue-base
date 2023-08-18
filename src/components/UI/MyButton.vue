@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        
+        name:'my-button'
     }
 </script>
 
@@ -17,5 +17,6 @@
 	background-color: greenyellow;
 	color: black;
 	border: 1px solid rgb(83, 138, 0);
+    cursor: pointer;
 }
 </style>
