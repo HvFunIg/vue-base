@@ -11,43 +11,41 @@
 				type="text" 
 				placeholder="Описание"
             >
-			<button class="btn" @click="createPost"> Создать</button>
+			<MyButton 
+                 style="align-self: flex-end; margin-top: 15px;"
+                @click="createPost"
+            > Создать</MyButton>
 		</form>
 </template>
 
 <script>
+import MyButton from './UI/MyButton.vue';
+
     export default {
-        data(){
-            return{
-                post:{
-                    title:'',
-                    body:''
-                }
+    data() {
+        return {
+            post: {
+                title: '',
+                body: ''
             }
-        },
-        methods: {
-            createPost(){
-                this.post.id = Date.now();
-                this.$emit('create',this.post)
-                this.post = {
-                    title: "",
-                    body: ""
-                }
-	        }
+        };
+    },
+    methods: {
+        createPost() {
+            this.post.id = Date.now();
+            this.$emit('create', this.post);
+            this.post = {
+                title: "",
+                body: ""
+            };
         }
-    }
+    },
+    components: { MyButton }
+}
 </script>
 
 <style scoped>
-.btn{
-	width: 100px;
-	align-self: flex-end;
-	margin-top: 15px;
-	padding: 10px;
-	background-color: greenyellow;
-	color: black;
-	border: 1px solid rgb(83, 138, 0);
-}
+
 
 input{
 	width: 100%;
