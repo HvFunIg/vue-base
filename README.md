@@ -62,8 +62,6 @@ app.mount('#app')
 
 ### 8. Данные от ребенка к родителю передаются через $emit
 
-
-
 **Дочерний компонент:**
 ```
 createPost(){
@@ -80,6 +78,36 @@ createPost(){
     @create="createPost"
 />
 ```
+
+### 9. Жизненный цикл
+Используются методы, аналогичные хукам в реакте. Например *mounted(){}*
+### 10. Наблюдаемые и вычисляемые свойства 
+*watch* - аналог *useEffect()*
+*computed* - *useMemo()*
+```
+<template>
+    <PostList  
+			:posts="randomName"
+		/>
+</template>
+
+...
+
+data() {
+		return{
+			selectedSort:"",
+		}
+	},
+	watch:{
+		selectedSort(newValue){
+
+        }
+	},
+    computed:{
+        randomName(){}
+    }
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
