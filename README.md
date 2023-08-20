@@ -107,7 +107,8 @@ data() {
         randomName(){}
     }
 ```
-
+### 11. Анимации 
+Для анимаций используется тег **<transition-group/>** (см. PostList.Vue)
 ### Compiles and hot-reloads for development
 ```
 npm run serve
